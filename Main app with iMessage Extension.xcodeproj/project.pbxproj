@@ -18,6 +18,8 @@
 		84D4443D1DB54600006E909D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D4443B1DB54600006E909D /* MainInterface.storyboard */; };
 		84D4443F1DB54600006E909D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D4443E1DB54600006E909D /* Assets.xcassets */; };
 		84D444431DB54600006E909D /* iMessage Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84D444341DB54600006E909D /* iMessage Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84D4444D1DB56085006E909D /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D4444C1DB56085006E909D /* Stickers.xcassets */; };
+		84D444511DB56085006E909D /* Sticker Pack Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84D4444A1DB56085006E909D /* Sticker Pack Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,13 @@
 			remoteGlobalIDString = 84D444331DB54600006E909D;
 			remoteInfo = "iMessage Extension";
 		};
+		84D4444F1DB56085006E909D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84D444051DB545E9006E909D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84D444491DB56085006E909D;
+			remoteInfo = "Sticker Pack Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +54,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				84D444431DB54600006E909D /* iMessage Extension.appex in Embed App Extensions */,
+				84D444511DB56085006E909D /* Sticker Pack Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +78,9 @@
 		84D4443C1DB54600006E909D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		84D4443E1DB54600006E909D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D444401DB54600006E909D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D4444A1DB56085006E909D /* Sticker Pack Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Sticker Pack Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84D4444C1DB56085006E909D /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		84D4444E1DB56085006E909D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +115,7 @@
 				84D4440F1DB545E9006E909D /* Main app with iMessage Extension */,
 				84D444241DB545E9006E909D /* Main app with iMessage ExtensionTests */,
 				84D444381DB54600006E909D /* iMessage Extension */,
+				84D4444B1DB56085006E909D /* Sticker Pack Extension */,
 				84D444351DB54600006E909D /* Frameworks */,
 				84D4440E1DB545E9006E909D /* Products */,
 			);
@@ -113,6 +127,7 @@
 				84D4440D1DB545E9006E909D /* Main app with iMessage Extension.app */,
 				84D444211DB545E9006E909D /* Main app with iMessage ExtensionTests.xctest */,
 				84D444341DB54600006E909D /* iMessage Extension.appex */,
+				84D4444A1DB56085006E909D /* Sticker Pack Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +173,15 @@
 			path = "iMessage Extension";
 			sourceTree = "<group>";
 		};
+		84D4444B1DB56085006E909D /* Sticker Pack Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84D4444C1DB56085006E909D /* Stickers.xcassets */,
+				84D4444E1DB56085006E909D /* Info.plist */,
+			);
+			path = "Sticker Pack Extension";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -174,6 +198,7 @@
 			);
 			dependencies = (
 				84D444421DB54600006E909D /* PBXTargetDependency */,
+				84D444501DB56085006E909D /* PBXTargetDependency */,
 			);
 			name = "Main app with iMessage Extension";
 			productName = "Main app with iMessage Extension";
@@ -215,6 +240,21 @@
 			productReference = 84D444341DB54600006E909D /* iMessage Extension.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
 		};
+		84D444491DB56085006E909D /* Sticker Pack Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84D444521DB56085006E909D /* Build configuration list for PBXNativeTarget "Sticker Pack Extension" */;
+			buildPhases = (
+				84D444481DB56085006E909D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sticker Pack Extension";
+			productName = "Sticker Pack Extension";
+			productReference = 84D4444A1DB56085006E909D /* Sticker Pack Extension.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -241,6 +281,11 @@
 						DevelopmentTeam = L4FET847JL;
 						ProvisioningStyle = Automatic;
 					};
+					84D444491DB56085006E909D = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = L4FET847JL;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 84D444081DB545E9006E909D /* Build configuration list for PBXProject "Main app with iMessage Extension" */;
@@ -259,6 +304,7 @@
 				84D4440C1DB545E9006E909D /* Main app with iMessage Extension */,
 				84D444201DB545E9006E909D /* Main app with iMessage ExtensionTests */,
 				84D444331DB54600006E909D /* iMessage Extension */,
+				84D444491DB56085006E909D /* Sticker Pack Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -287,6 +333,14 @@
 			files = (
 				84D4443F1DB54600006E909D /* Assets.xcassets in Resources */,
 				84D4443D1DB54600006E909D /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84D444481DB56085006E909D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84D4444D1DB56085006E909D /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +384,11 @@
 			isa = PBXTargetDependency;
 			target = 84D444331DB54600006E909D /* iMessage Extension */;
 			targetProxy = 84D444411DB54600006E909D /* PBXContainerItemProxy */;
+		};
+		84D444501DB56085006E909D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84D444491DB56085006E909D /* Sticker Pack Extension */;
+			targetProxy = 84D4444F1DB56085006E909D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -540,6 +599,30 @@
 			};
 			name = Release;
 		};
+		84D444531DB56085006E909D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = L4FET847JL;
+				INFOPLIST_FILE = "Sticker Pack Extension/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.buddybuild.Main-app-with-iMessage-Extension.Sticker-Pack-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		84D444541DB56085006E909D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				DEVELOPMENT_TEAM = L4FET847JL;
+				INFOPLIST_FILE = "Sticker Pack Extension/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.buddybuild.Main-app-with-iMessage-Extension.Sticker-Pack-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,6 +656,14 @@
 			buildConfigurations = (
 				84D444451DB54600006E909D /* Debug */,
 				84D444461DB54600006E909D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84D444521DB56085006E909D /* Build configuration list for PBXNativeTarget "Sticker Pack Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D444531DB56085006E909D /* Debug */,
+				84D444541DB56085006E909D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
